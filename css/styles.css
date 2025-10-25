@@ -621,3 +621,28 @@ button[type="submit"]:hover {
 .status-ok { color:#1c7c2f; animation:popIn .25s ease; }
 .status-err { color:#ff4d4f; animation:popIn .25s ease; }
 
+/* 3- Scroll progress line */
+#scrollProgress{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 4px;           /* line thickness */
+    width: 0%;
+    background: linear-gradient(90deg, #f6b10a, #ff4d6d);
+    border-radius: 0 2px 2px 0;
+    z-index: 9999;
+    pointer-events: none;
+    transition: width .08s linear;
+}
+
+/* place the line at the bottom instead of top */
+#scrollProgress.progress--bottom{
+    top: auto;
+    bottom: 0;
+    border-radius: 2px 2px 0 0;
+}
+
+/* respect reduced motion users */
+@media (prefers-reduced-motion: reduce){
+    #scrollProgress{ transition: none; }
+}
