@@ -85,7 +85,7 @@
     render();
 })();
 
-// ---- Contact form: validation + feedback + localStorage helpers ----
+// ---- Contact form: validation + feedback + localStorage helpers  ----
 (function () {
     const form = document.querySelector('.contact-form');
     if (!form) return;
